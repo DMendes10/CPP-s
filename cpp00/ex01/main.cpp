@@ -6,7 +6,7 @@
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 17:43:08 by diomende          #+#    #+#             */
-/*   Updated: 2026/01/06 20:28:16 by diomende         ###   ########.fr       */
+/*   Updated: 2026/01/06 21:01:08 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,4 @@ int main()
 	}
 	int i = arr.size();
 	std::cout << i;
-	// std::cout << "Quantos cm tem o teu vergalho?\n";
-	// int nome = 0;
-	// std::cin >> nome;
-	// switch (nome)
-	// {
-	// 	case (1):
-	// 		std::cout << nome << " cm? ahahah bue pequeno!";
-	// 		break;
-	// 	default:
-	// 		std::cout << "nah bro isso e gigante \n";
-	// }
-	// std::cin >> nome;
-	// std::string pnome = "olaaaaaa\n";
-	// int len = pnome.size();
-	// std::cout << nome ;
 }
