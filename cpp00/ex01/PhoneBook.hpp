@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 17:43:08 by diomende          #+#    #+#             */
-/*   Updated: 2026/01/20 19:44:07 by diomende         ###   ########.fr       */
+/*   Created: 2026/01/16 16:04:25 by diomende          #+#    #+#             */
+/*   Updated: 2026/01/20 19:13:23 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-int main()
-{
-	PhoneBook a;
-	
-	a.addNewContact();
-	a.searchContacts();
-	// a.newContact();
-	// a.displaySingleContact();
-	// a.displayContactPreview(1);
-}
+#include "Contact.hpp"
+
+class PhoneBook{
+	private:
+		int arrayPosition;
+		Contact ArrayofContacts[10];
+	public:
+		PhoneBook();
+		~PhoneBook();
+		void addNewContact();
+		void searchContacts();
+		void exitPhoneBook();
+		bool isValidNumber(std::string s);
+};
+
+#endif

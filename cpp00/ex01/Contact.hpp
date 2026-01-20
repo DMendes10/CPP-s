@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 17:43:08 by diomende          #+#    #+#             */
-/*   Updated: 2026/01/20 19:44:07 by diomende         ###   ########.fr       */
+/*   Created: 2026/01/16 16:07:38 by diomende          #+#    #+#             */
+/*   Updated: 2026/01/16 20:02:24 by diomende         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-int main()
-{
-	PhoneBook a;
-	
-	a.addNewContact();
-	a.searchContacts();
-	// a.newContact();
-	// a.displaySingleContact();
-	// a.displayContactPreview(1);
-}
+# include <string.h>
+# include <iostream>
+
+class Contact {
+	private:
+		std::string firstName;
+		std::string lastName;
+		std::string nickname;
+		std::string	phoneNumber;
+		std::string darkestSecret;
+	public:
+		Contact();
+		~Contact();
+		void newContact();
+		void displaySingleContact();
+		void displayContactPreview(int id);
+};
+
+#endif
