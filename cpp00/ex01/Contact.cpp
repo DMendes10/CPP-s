@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: diogo <diogo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 17:43:29 by diomende          #+#    #+#             */
-/*   Updated: 2026/01/20 19:55:36 by diomende         ###   ########.fr       */
+/*   Updated: 2026/01/22 18:27:15 by diogo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,16 @@
 void Contact::newContact(){
 	
 	std::cout << "Insert the contact's first name" << std::endl;
-	std::cin >> this->firstName;
+	std::getline(std::cin, this->firstName);
 	std::cout << "Insert the contact's last name" << std::endl;
-	std::cin >> this->lastName;
+	std::getline(std::cin, this->lastName);
 	std::cout << "Insert the contact's nickname" << std::endl;
-	std::cin >> this->nickname;
+	std::getline(std::cin, this->nickname);
 	std::cout << "Insert the contact's phone number" << std::endl;
-	std::cin >> this->phoneNumber;
-	std::cin.ignore();
+	std::getline(std::cin, this->phoneNumber);
 	std::cout << "Insert the contact's darkest secret" << std::endl;
-	std::string secret;
-	std::getline(std::cin, secret);
-	this->darkestSecret = secret;
+	std::getline(std::cin, this->darkestSecret);
+	std::cout << "--------------Contact Added!-------------" << std::endl << std::endl;
 };
 
 void Contact::displaySingleContact(){
@@ -34,7 +32,7 @@ void Contact::displaySingleContact(){
 	std::cout << "Last Name: "<< this->lastName << std::endl;
 	std::cout << "Nickname: "<< this->nickname << std::endl;
 	std::cout << "Phone Number: "<< this->phoneNumber << std::endl;
-	std::cout << "Darkest Secret: "<< this->darkestSecret << std::endl;
+	std::cout << "Darkest Secret: "<< this->darkestSecret << std::endl << std::endl;
 };
 
 void	Contact::displayContactPreview(int id){
@@ -82,4 +80,3 @@ void	Contact::displayContactPreview(int id){
 };
 
 Contact::Contact(){};
-Contact::~Contact(){};

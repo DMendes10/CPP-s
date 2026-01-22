@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: diogo <diogo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 17:43:05 by diomende          #+#    #+#             */
-/*   Updated: 2026/01/20 19:38:12 by diomende         ###   ########.fr       */
+/*   Updated: 2026/01/22 18:29:40 by diogo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@ PhoneBook::PhoneBook(){
 	this->arrayPosition = 0;
 };
 
-PhoneBook::~PhoneBook(){};
-
 void PhoneBook::addNewContact(){
 	
 	Contact a;
 	a.newContact();
-	if (this->arrayPosition < 7)
+	if (this->arrayPosition < 8)
 	{
 		this->ArrayofContacts[this->arrayPosition] = a;
 		this->arrayPosition++;
@@ -39,7 +37,7 @@ void PhoneBook::searchContacts(){
 
 	if (this->arrayPosition == 0)
 	{
-		std::cout << "No contact added yet" << std::endl;
+		std::cout << "---------No contact added yet!------------" << std::endl << std::endl;
 		return;
 	}
 	std::cout << "     index|first name| last name|  nickname|" << std::endl;
@@ -50,15 +48,14 @@ void PhoneBook::searchContacts(){
 	}
 	std::cout << "What contact do you want to display? (input desired index)" << std::endl;
 	std::string index;
-	std::cin >> index;
-	std::cin.ignore();
+	std::getline(std::cin, index);
 	if (!isValidNumber(index))
 	{
-		std::cout << "Index must be a numeric number" << std::endl;
+		std::cout << "Index must be a positive numeric number" << std::endl;
 		return ;
 	}
 	int id = std::stoi(index);
-	if (id > 7 || id < 0)
+	if (id > 8 || id < 1)
 	{
 		std::cout << "Invalid index" << std::endl;
 		return;
@@ -74,8 +71,3 @@ bool PhoneBook::isValidNumber(std::string s){
 	}
 	return (true);
 }
-
-void exitPhoneBook(){
-	
-};
-

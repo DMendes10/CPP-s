@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diomende <diomende@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: diogo <diogo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 16:07:38 by diomende          #+#    #+#             */
-/*   Updated: 2026/01/16 20:02:24 by diomende         ###   ########.fr       */
+/*   Updated: 2026/01/22 18:26:42 by diogo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Contact {
 		std::string darkestSecret;
 	public:
 		Contact();
-		~Contact();
 		void newContact();
 		void displaySingleContact();
 		void displayContactPreview(int id);
