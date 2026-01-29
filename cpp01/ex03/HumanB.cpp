@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diogo <diogo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 19:04:53 by diogo             #+#    #+#             */
-/*   Updated: 2026/01/27 16:08:31 by diogo            ###   ########.fr       */
+/*   Created: 2026/01/27 15:46:09 by diogo             #+#    #+#             */
+/*   Updated: 2026/01/27 17:11:26 by diogo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "HumanB.hpp"
 
-# include <string.h>
-# include <iostream>
+HumanB::HumanB(std::string myname) : name(myname)
+{
+    std::cout << "contructor HumanB started" << std::endl;
+}
 
-class Zombie{
-    private:
-        std::string name;
-    public:
-        Zombie();
-        Zombie(std::string);
-        ~Zombie();
-        void announce();
-};
-
-Zombie *newZombie(std::string name);
-void randomChump(std::string name);
-
-#endif
+HumanB::~HumanB()
+{
+}
+void HumanB::attack()
+{
+    std::cout << name << " attacks with their " << mainWeapon->getType() << std::endl;
+}
+void HumanB::setWeapon (Weapon &a)
+{
+    mainWeapon = &a;
+}

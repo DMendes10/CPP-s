@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diogo <diogo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 19:04:53 by diogo             #+#    #+#             */
-/*   Updated: 2026/01/27 16:08:31 by diogo            ###   ########.fr       */
+/*   Created: 2026/01/27 15:46:09 by diogo             #+#    #+#             */
+/*   Updated: 2026/01/27 16:50:59 by diogo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "HumanA.hpp"
 
-# include <string.h>
-# include <iostream>
+HumanA::HumanA(std::string myname, Weapon &myWeapon) : name(myname), mainWeapon(myWeapon)
+{
+    std::cout << "HumanA constructer called" << std::endl;
+}
 
-class Zombie{
-    private:
-        std::string name;
-    public:
-        Zombie();
-        Zombie(std::string);
-        ~Zombie();
-        void announce();
-};
-
-Zombie *newZombie(std::string name);
-void randomChump(std::string name);
-
-#endif
+HumanA::~HumanA()
+{
+}
+void HumanA::attack()
+{
+    std::cout << name << " attacks with their " << mainWeapon.getType() << std::endl;
+}

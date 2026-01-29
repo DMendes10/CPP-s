@@ -6,9 +6,12 @@
 /*   By: diogo <diogo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 19:04:53 by diogo             #+#    #+#             */
-/*   Updated: 2026/01/26 16:22:13 by diogo            ###   ########.fr       */
+/*   Updated: 2026/01/27 16:09:34 by diogo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 # include <string.h>
 # include <iostream>
@@ -26,3 +29,4 @@ class Zombie{
 
 Zombie* zombieHorde(int N, std::string name);
 
+#endif

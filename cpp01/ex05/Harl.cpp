@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diogo <diogo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 19:04:53 by diogo             #+#    #+#             */
-/*   Updated: 2026/01/27 16:08:31 by diogo            ###   ########.fr       */
+/*   Created: 2026/01/29 18:03:16 by diogo             #+#    #+#             */
+/*   Updated: 2026/01/29 18:06:15 by diogo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Harl.hpp"
 
-# include <string.h>
-# include <iostream>
+Harl::Harl(){
+    std::cout << "Default constuctor called" << std::endl;
+}
+Harl::~Harl(){
+        std::cout << "Default destuctor called" << std::endl;
+}
 
-class Zombie{
-    private:
-        std::string name;
-    public:
-        Zombie();
-        Zombie(std::string);
-        ~Zombie();
-        void announce();
-};
 
-Zombie *newZombie(std::string name);
-void randomChump(std::string name);
-
-#endif
