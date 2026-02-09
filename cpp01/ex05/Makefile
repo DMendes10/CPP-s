@@ -1,4 +1,4 @@
-NAME := SedIs4Losers
+NAME := harl
 
 CC := c++
 CFLAGS := -Wall -Wextra -Werror
